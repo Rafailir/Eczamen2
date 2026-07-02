@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Коробки.есть</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="logo-container">
+                <img src="icon.png" alt="Logo" class="logo-icon">
+                <a class="navbar-brand" href="#">Корочки.есть</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-link" href="auth.html">Вход</a>
+                <a class="nav-link active" href="index.html">Регистрация</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h4 class="mb-0">Регистрация пользователя</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="registrationForm">
+                            <div class="mb-3">
+                                <label for="login" class="form-label">Логин (латиница и цифры, мин. 6 символов)</label>
+                                <input type="text" class="form-control" id="login" name="login" 
+                                       pattern="[a-zA-Z0-9]{6,}" required>
+                                <div class="form-text">Только латинские буквы и цифры</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Пароль (мин. 8 символов)</label>
+                                <input type="password" class="form-control" id="password" name="password" 
+                                       minlength="8" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fio" class="form-label">ФИО (кириллица и пробелы)</label>
+                                <input type="text" class="form-control" id="fio" name="fio" 
+                                       pattern="[а-яА-ЯёЁ\s]+" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Телефон</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" 
+                                       placeholder="8(XXX)XXX-XX-XX" 
+                                       pattern="8\(\d{3}\)\d{3}-\d{2}-\d{2}" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-secondary">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>Уже зарегистрированы? <a href="auth.html">Войти</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
